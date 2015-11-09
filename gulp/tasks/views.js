@@ -15,9 +15,9 @@ gulp.task('views', function() {
   // Process any other view files from app/views
   return gulp.src(config.views.src)
     .pipe(templateCache({
-      standalone: true
+      standalone: true,
     }))
     .pipe(gulp.dest(config.views.dest))
-    .pipe(browserSync.stream({ once: true }));
+    .pipe(browserSync.stream({once: true}));
 
 });

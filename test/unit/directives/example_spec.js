@@ -1,10 +1,11 @@
-/*global angular, module, browser*/
+/* global angular */
 
 'use strict';
 
 describe('Unit: ExampleDirective', function() {
 
-  var element, scope;
+  var element;
+  var scope;
 
   beforeEach(function() {
     spyOn(window, 'alert');

@@ -25,10 +25,10 @@ function buildScript(file) {
     debug: true,
     cache: {},
     packageCache: {},
-    fullPaths: !global.isProd
+    fullPaths: !global.isProd,
   });
 
-  if ( !global.isProd ) {
+  if (!global.isProd) {
     bundler = watchify(bundler);
 
     bundler.on('update', function() {
@@ -38,11 +38,11 @@ function buildScript(file) {
   }
 
   const transforms = [
-    { 'name':babelify, 'options': {}},
-    { 'name':debowerify, 'options': {}},
-    { 'name':ngAnnotate, 'options': {}},
-    { 'name':'brfs', 'options': {}},
-    { 'name':'bulkify', 'options': {}}
+    {'name': babelify, 'options': {}},
+    {'name': debowerify, 'options': {}},
+    {'name': ngAnnotate, 'options': {}},
+    {'name': 'brfs', 'options': {}},
+    {'name': 'bulkify', 'options': {}},
   ];
 
   transforms.forEach(function(transform) {
@@ -59,11 +59,11 @@ function buildScript(file) {
       .pipe(gulpif(createSourcemap, sourcemaps.init()))
       .pipe(gulpif(global.isProd, streamify(uglify({
         mangle: false,
-        compress: { drop_console: true }
+        compress: {drop_console: true},
       }))))
       .pipe(gulpif(createSourcemap, sourcemaps.write('./')))
       .pipe(gulp.dest(config.scripts.dest))
-      .pipe(browserSync.stream({ once: true }));
+      .pipe(browserSync.stream({once: true}));
   }
 
   return rebundle();
