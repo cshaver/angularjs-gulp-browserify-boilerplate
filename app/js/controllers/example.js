@@ -12,5 +12,5 @@ function ExampleCtrl() {
 
 export default {
   name: 'ExampleCtrl',
-  fn: ExampleCtrl
+  fn: ExampleCtrl,
 };

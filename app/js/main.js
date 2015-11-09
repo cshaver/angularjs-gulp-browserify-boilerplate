@@ -17,7 +17,7 @@ const requires = [
   'app.filters',
   'app.controllers',
   'app.services',
-  'app.directives'
+  'app.directives',
 ];
 
 // mount on window for testing

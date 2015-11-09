@@ -21,6 +21,6 @@ export default {
     var taskTime = process.hrtime(startTime);
     var prettyTime = prettyHrtime(taskTime);
     gutil.log('Finished', gutil.colors.green(`'bundle'`), 'in', gutil.colors.magenta(prettyTime));
-  }
+  },
 
 };

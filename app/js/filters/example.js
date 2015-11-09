@@ -8,5 +8,5 @@ function ExampleFilter() {
 
 export default {
   name: 'ExampleFilter',
-  fn: ExampleFilter
+  fn: ExampleFilter,
 };

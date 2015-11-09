@@ -16,20 +16,20 @@ gulp.task('browserSync', function() {
       middleware: function(req, res, next) {
         let fileHref = url.parse(req.url).href;
 
-        if ( !ASSET_EXTENSION_REGEX.test(fileHref) ) {
+        if (!ASSET_EXTENSION_REGEX.test(fileHref)) {
           req.url = '/' + DEFAULT_FILE;
         }
 
         return next();
-      }
+      },
     },
-  	port: config.browserPort,
-  	ui: {
-    	port: config.UIPort
+    port: config.browserPort,
+    ui: {
+      port: config.UIPort,
     },
     ghostMode: {
-      links: false
-    }
+      links: false,
+    },
   });
 
 });

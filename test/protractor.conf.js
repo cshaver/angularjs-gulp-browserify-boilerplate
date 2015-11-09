@@ -15,7 +15,7 @@ exports.config = {
   capabilities: {
     browserName: 'chrome',
     version: '',
-    platform: 'ANY'
+    platform: 'ANY',
   },
 
   framework: 'jasmine2',
@@ -24,11 +24,11 @@ exports.config = {
     isVerbose: false,
     showColors: true,
     includeStackTrace: true,
-    defaultTimeoutInterval: 30000
+    defaultTimeoutInterval: 30000,
   },
 
   specs: [
-    'e2e/**/*.js'
-  ]
+    'e2e/**/*.js',
+  ],
 
 };

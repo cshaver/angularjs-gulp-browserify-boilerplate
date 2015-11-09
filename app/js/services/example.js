@@ -20,5 +20,5 @@ function ExampleService($http) {
 
 export default {
   name: 'ExampleService',
-  fn: ExampleService
+  fn: ExampleService,
 };

@@ -1,10 +1,11 @@
-/*global angular */
+/* global angular */
 
 'use strict';
 
 describe('Unit: ExampleService', function() {
 
-  var http, service;
+  var http;
+  var service;
 
   beforeEach(function() {
     // instantiate the app module
